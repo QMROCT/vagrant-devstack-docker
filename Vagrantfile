@@ -1,6 +1,7 @@
 conf = {
   'ip' => '192.168.27.100',
-  'box' => 'ubuntu/trusty64',
+  'box_name' => 'ubuntu/trusty64',
+  'box_url' => 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box',
   'memory' => 3072,
   'cpus' => 1
 }
@@ -18,7 +19,8 @@ end
 
 Vagrant::Config.run do |config|
 
-  config.vm.box = conf['box']
+  config.vm.box = conf['box_name']
+  config.vm.box_url = conf['box_url']
 
   # For horizon
   config.vm.forward_port 80, 8080
