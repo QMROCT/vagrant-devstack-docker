@@ -21,8 +21,7 @@ cd /opt/stack/devstack/
 source openrc
 
 cd /home/vagrant/
-cp /vagrant/id_* .ssh/
-chmod 600 .ssh/id_*
+ssh-keygen -f .ssh/id_rsa -t rsa -N ''
 cp /vagrant/Dockerfile .
 
 sudo docker build -t docker-ssh .
