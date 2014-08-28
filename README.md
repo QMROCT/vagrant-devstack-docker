@@ -7,7 +7,7 @@ Horizon will be reachable at [`localhost:8080`](http://localhost:8080/).
 
 ## Usage
 
-```
+```bash
 git clone https://github.com/QMROCT/vagrant-devstack-docker
 cd vagrant-devstack-docker
 vagrant up
