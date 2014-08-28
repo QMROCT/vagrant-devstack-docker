@@ -11,12 +11,12 @@ git clone --depth 1 https://git.openstack.org/stackforge/nova-docker /opt/stack/
 git clone --depth 1 https://git.openstack.org/openstack-dev/devstack /opt/stack/devstack
 git clone --depth 1 https://git.openstack.org/openstack/nova /opt/stack/nova
 
+cp /vagrant/localrc /opt/stack/devstack/
+
 cd /opt/stack/nova-docker/contrib/devstack/
 ./prepare_devstack.sh
 
 cd /opt/stack/devstack/
-cp /vagrant/localrc .
-
 ./stack.sh
 source openrc
 
