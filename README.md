@@ -11,8 +11,9 @@ Horizon will be reachable at [`localhost:8080`](http://localhost:8080/).
 git clone https://github.com/QMROCT/vagrant-devstack-docker
 cd vagrant-devstack-docker
 vagrant up
-# …
+# … wait …
 vagrant ssh
+source /opt/stack/devstack/openrc
 nova boot --image docker-ssh --flavor 1 docker-ssh
 ssh root@10.0.0.x
 ```

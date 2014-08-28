@@ -22,6 +22,7 @@ source openrc
 
 cd /home/vagrant/
 cp /vagrant/id_* .ssh/
+chmod 600 .ssh/id_*
 cp /vagrant/Dockerfile .
 
 sudo docker build -t docker-ssh .
