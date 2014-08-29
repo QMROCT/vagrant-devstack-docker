@@ -7,9 +7,9 @@ sudo apt-get install -y git vim lxc-docker
 # From: https://github.com/stackforge/nova-docker/tree/master/contrib/devstack
 sudo chown vagrant /opt
 
-git clone --depth 1 https://git.openstack.org/stackforge/nova-docker /opt/stack/nova-docker
-git clone --depth 1 https://git.openstack.org/openstack-dev/devstack /opt/stack/devstack
-git clone --depth 1 https://git.openstack.org/openstack/nova /opt/stack/nova
+git clone --depth 1 https://github.com/stackforge/nova-docker /opt/stack/nova-docker
+git clone --depth 1 https://github.com/openstack-dev/devstack /opt/stack/devstack
+git clone --depth 1 https://github.com/openstack/nova /opt/stack/nova
 
 cp /vagrant/localrc /opt/stack/devstack/
 
