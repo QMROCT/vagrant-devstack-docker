@@ -10,17 +10,15 @@ Vagrant.configure('2') do |config|
 
   config.vm.network 'private_network', ip: conf['ip']
 
-  config.vm.provider "virtualbox" do |v|
-    v.memory = conf['memory'].to_s()
-    v.cpus = conf['cpus']
-  end
-
 end
 
 Vagrant::Config.run do |config|
 
   config.vm.box = conf['box_name']
   config.vm.box_url = conf['box_url']
+
+  config.vm.customize ["modifyvm", :id, "--memory", conf['memory']]
+  config.vm.customize ["modifyvm", :id, "--cpus", conf['cpus']]
 
   # For horizon
   config.vm.forward_port 80, 8080
